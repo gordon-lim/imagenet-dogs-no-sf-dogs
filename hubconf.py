@@ -13,7 +13,7 @@ def resnet50(**kwargs):
     # Call the model, load pretrained weights
     model = _resnet50(**kwargs)
     num_ftrs = model.fc.in_features
-    model.fc = torch.nn.Linear(num_ftrs, 880)
+    model.fc = torch.nn.Linear(num_ftrs, 120)
 
     checkpoint = 'https://cumberland.isis.vanderbilt.edu/gordon/resnet50-imagenet-dogs-no-sf-dogs.pth.tar'
 
